@@ -19,6 +19,15 @@
 		0EFE5A2E28E0A94D00888801 /* MyForcastUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFE5A2D28E0A94D00888801 /* MyForcastUITestsLaunchTests.swift */; };
 		0EFE5A4628E0AB1000888801 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFE5A4428E0AB1000888801 /* HomeViewController.swift */; };
 		0EFE5A4728E0AB1000888801 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EFE5A4528E0AB1000888801 /* HomeViewController.xib */; };
+		0EFE5A4C28E0ABE200888801 /* HttpClientDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFE5A4B28E0ABE200888801 /* HttpClientDecorator.swift */; };
+		0EFE5A4E28E0ABFC00888801 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFE5A4D28E0ABFC00888801 /* Reachability.swift */; };
+		0EFE5A5028E0AC2100888801 /* HttpClientImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFE5A4F28E0AC2100888801 /* HttpClientImpl.swift */; };
+		0EFE5A5228E0AC3A00888801 /* HTTPSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFE5A5128E0AC3A00888801 /* HTTPSession.swift */; };
+		0EFE5A5428E0AC4D00888801 /* HTTPURLSessionTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFE5A5328E0AC4D00888801 /* HTTPURLSessionTask.swift */; };
+		0EFE5A5728E0AC7B00888801 /* URLSession+HTTPSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFE5A5628E0AC7B00888801 /* URLSession+HTTPSession.swift */; };
+		0EFE5A5A28E0ACA600888801 /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFE5A5928E0ACA600888801 /* HttpMethod.swift */; };
+		0EFE5A5C28E0ACC800888801 /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFE5A5B28E0ACC800888801 /* ApiRequest.swift */; };
+		0EFE5A5E28E0ACFA00888801 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFE5A5D28E0ACFA00888801 /* ApiError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +64,15 @@
 		0EFE5A2D28E0A94D00888801 /* MyForcastUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyForcastUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0EFE5A4428E0AB1000888801 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0EFE5A4528E0AB1000888801 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		0EFE5A4B28E0ABE200888801 /* HttpClientDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClientDecorator.swift; sourceTree = "<group>"; };
+		0EFE5A4D28E0ABFC00888801 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		0EFE5A4F28E0AC2100888801 /* HttpClientImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClientImpl.swift; sourceTree = "<group>"; };
+		0EFE5A5128E0AC3A00888801 /* HTTPSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPSession.swift; sourceTree = "<group>"; };
+		0EFE5A5328E0AC4D00888801 /* HTTPURLSessionTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPURLSessionTask.swift; sourceTree = "<group>"; };
+		0EFE5A5628E0AC7B00888801 /* URLSession+HTTPSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+HTTPSession.swift"; sourceTree = "<group>"; };
+		0EFE5A5928E0ACA600888801 /* HttpMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMethod.swift; sourceTree = "<group>"; };
+		0EFE5A5B28E0ACC800888801 /* ApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
+		0EFE5A5D28E0ACFA00888801 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +182,8 @@
 		0EFE5A3F28E0AAB300888801 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				0EFE5A4A28E0ABA000888801 /* Repositories */,
+				0EFE5A4928E0AB9600888801 /* Networking */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -186,6 +206,7 @@
 		0EFE5A4228E0AAF100888801 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				0EFE5A4828E0AB3300888801 /* ViewModel */,
 				0EFE5A4328E0AAFF00888801 /* View */,
 			);
 			path = Home;
@@ -198,6 +219,52 @@
 				0EFE5A4528E0AB1000888801 /* HomeViewController.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		0EFE5A4828E0AB3300888801 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0EFE5A4928E0AB9600888801 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				0EFE5A5828E0AC9200888801 /* Model */,
+				0EFE5A5528E0AC6600888801 /* Extension */,
+				0EFE5A4B28E0ABE200888801 /* HttpClientDecorator.swift */,
+				0EFE5A4D28E0ABFC00888801 /* Reachability.swift */,
+				0EFE5A4F28E0AC2100888801 /* HttpClientImpl.swift */,
+				0EFE5A5128E0AC3A00888801 /* HTTPSession.swift */,
+				0EFE5A5328E0AC4D00888801 /* HTTPURLSessionTask.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		0EFE5A4A28E0ABA000888801 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		0EFE5A5528E0AC6600888801 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				0EFE5A5628E0AC7B00888801 /* URLSession+HTTPSession.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		0EFE5A5828E0AC9200888801 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0EFE5A5928E0ACA600888801 /* HttpMethod.swift */,
+				0EFE5A5B28E0ACC800888801 /* ApiRequest.swift */,
+				0EFE5A5D28E0ACFA00888801 /* ApiError.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,10 +399,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EFE5A5C28E0ACC800888801 /* ApiRequest.swift in Sources */,
+				0EFE5A5028E0AC2100888801 /* HttpClientImpl.swift in Sources */,
+				0EFE5A5428E0AC4D00888801 /* HTTPURLSessionTask.swift in Sources */,
+				0EFE5A5728E0AC7B00888801 /* URLSession+HTTPSession.swift in Sources */,
+				0EFE5A4E28E0ABFC00888801 /* Reachability.swift in Sources */,
+				0EFE5A5A28E0ACA600888801 /* HttpMethod.swift in Sources */,
 				0EFE5A4628E0AB1000888801 /* HomeViewController.swift in Sources */,
+				0EFE5A5E28E0ACFA00888801 /* ApiError.swift in Sources */,
+				0EFE5A5228E0AC3A00888801 /* HTTPSession.swift in Sources */,
 				0EFE5A0C28E0A94A00888801 /* ViewController.swift in Sources */,
 				0EFE5A0828E0A94A00888801 /* AppDelegate.swift in Sources */,
 				0EFE5A1228E0A94A00888801 /* MyForcast.xcdatamodeld in Sources */,
+				0EFE5A4C28E0ABE200888801 /* HttpClientDecorator.swift in Sources */,
 				0EFE5A0A28E0A94A00888801 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
