@@ -11,7 +11,7 @@ class HomeViewController: UIViewController {
 
     @IBOutlet weak var mTableView: UITableView!
     @IBOutlet weak var mTextFieldSearch: UITextField!
-    
+    @IBOutlet weak var mAddButton: UIButton!
     var viewModel : HomePageVM?
     
     var timer: Timer?
@@ -44,6 +44,7 @@ class HomeViewController: UIViewController {
      This function to initialize textField actions
      */
     func initTextField() {
+        self.mAddButton.setTitle("", for: .normal)
         self.mTextFieldSearch.delegate = self
         self.mTextFieldSearch.addTarget(self,
                                            action: #selector(textFieldEditingDidChange(_:)),
@@ -51,24 +52,16 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func onClickAddNewCity(_ sender: Any) {
-       /* let weatherRepository = WeatherRepository(httpClient: HttpClientDecorator(HttpClientImpl(httpSession: URLSession.shared)))
-        let vcSearch = SearchCityVC(viewModel: SearchCityVM(weatherRepository: weatherRepository))
+        let weatherRepository = WeatherRepositoryImp(httpClient: HttpClientDecorator(HttpClientImpl(httpSession: URLSession.shared)))
+        let vcSearch = SearchCityViewController(viewModel: SearchCityViewModel(weatherRepository: weatherRepository))
         vcSearch.modalTransitionStyle = .coverVertical
         vcSearch.modalPresentationStyle = .popover
         vcSearch.delegate = self
-        self.present(vcSearch, animated: true)*/
+        self.present(vcSearch, animated: true)
     }
 }
 
-/*
- This extenstion will handle actions got from searchPageVC
- */
-/*extension HomeViewController: SearchCityVCDelegate {
-    func onSelectItemCity(city: ResultCity) {
-        self.viewModel?.addCityToList(city: city)
-        self.viewModel?.loadListWeatherByCities()
-    }
-}*/
+
 
 /*
  This extenstion to handle the ViewModel actions
@@ -161,4 +154,12 @@ extension HomeViewController: UITextFieldDelegate {
         self.viewModel?.searchForCityWeaher(value: self.searchValue)
     }
     
+    
 }
+extension HomeViewController : SearchCityViewControlerDelegate {
+    func onSelectItemCity(city: ResultCity) {
+        self.viewModel?.addCityToList(city: city)
+        self.viewModel?.loadListWeatherByCities()
+    }
+}
+

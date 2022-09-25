@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="MyForcast" customModuleProvider="target">
             <connections>
+                <outlet property="mAddButton" destination="6ur-j7-S9H" id="xsn-dO-apA"/>
                 <outlet property="mTableView" destination="i4J-TG-YGP" id="YOb-CX-Od1"/>
                 <outlet property="mTextFieldSearch" destination="Ix4-m3-sOB" id="ZMJ-C8-QFN"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -30,6 +31,18 @@
                     <rect key="frame" x="0.0" y="110" width="414" height="752"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ur-j7-S9H">
+                    <rect key="frame" x="358" y="806" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="Bai-nS-s3C"/>
+                        <constraint firstAttribute="height" constant="40" id="iT6-ab-M0B"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="ic-add"/>
+                    <connections>
+                        <action selector="onClickAddNewCity:" destination="-1" eventType="touchUpInside" id="lbg-zU-d8T"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -38,14 +51,17 @@
                 <constraint firstItem="i4J-TG-YGP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="HYL-tg-ENg"/>
                 <constraint firstItem="i4J-TG-YGP" firstAttribute="top" secondItem="Ix4-m3-sOB" secondAttribute="bottom" constant="16" id="Jfh-t1-J0i"/>
                 <constraint firstItem="Ix4-m3-sOB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="STU-gj-uCU"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="6ur-j7-S9H" secondAttribute="trailing" constant="16" id="aqE-d6-X3L"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Ix4-m3-sOB" secondAttribute="trailing" id="sQU-21-ysJ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="i4J-TG-YGP" secondAttribute="trailing" id="xaX-oI-Yb3"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="6ur-j7-S9H" secondAttribute="bottom" constant="16" id="y6x-pa-DvP"/>
                 <constraint firstItem="Ix4-m3-sOB" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="z4z-j3-MUU"/>
             </constraints>
             <point key="canvasLocation" x="139" y="114"/>
         </view>
     </objects>
     <resources>
+        <image name="ic-add" width="48" height="48"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
