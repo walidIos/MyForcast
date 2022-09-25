@@ -25,7 +25,6 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.viewModel?.delegate = self
-        self.viewModel?.loadListCities()
         self.viewModel?.loadListWeatherByCities()
         self.initTableView()
         self.initTextField()

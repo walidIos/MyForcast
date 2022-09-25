@@ -31,7 +31,7 @@ class DetailCityViewController: UIViewController {
         self.lbDistrictName.text = self.model?.districtName ?? ""
         self.lbTempView.text = "\(self.model?.current?.temp ?? 0)° C"
         if let firstWeather = self.model?.current?.weather.first {
-            let imgPath = Constants.pathImgIcon.replacingOccurrences(of: "**_**", with: firstWeather.icon)
+            let imgPath = Constants.pathImgIcon.replacingOccurrences(of: "**_**", with: firstWeather.icon!)
             guard let urlImagePath = URL(string: imgPath) else { return }
             self.imgIconWeather.load(url: urlImagePath)
         }

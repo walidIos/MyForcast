@@ -27,20 +27,21 @@ struct WeatherResponse: Codable {
 
 // MARK: - Current
 struct Current: Codable {
-    let dt: Int
-    let sunrise, sunset: Int?
-    let temp, feelsLike: Double
-    let pressure, humidity: Int
-    let dewPoint: Double
-    let clouds: Int
-    let visibility: Int?
-    let windSpeed: Double
-    let windDeg: Int
-    let weather: [Weather]
-    let windGust: Double?
+    var valDt: Int?
+    var sunrise, sunset: Int?
+    var temp, feelsLike: Double?
+    var pressure, humidity: Int?
+    var dewPoint: Double?
+    var clouds: Int?
+    var visibility: Int?
+    var windSpeed: Double?
+    var windDeg: Int?
+    var weather: [Weather]
+    var windGust: Double?
 
     enum CodingKeys: String, CodingKey {
-        case dt, sunrise, sunset, temp
+        case valDt = "dt"
+        case sunrise, sunset, temp
         case feelsLike = "feels_like"
         case pressure, humidity
         case dewPoint = "dew_point"
@@ -54,8 +55,8 @@ struct Current: Codable {
 
 // MARK: - Weather
 struct Weather: Codable {
-    let id: Int
-    let main, weatherDescription, icon: String
+    var id: Int?
+    var main, weatherDescription, icon: String?
 
     enum CodingKeys: String, CodingKey {
         case id, main

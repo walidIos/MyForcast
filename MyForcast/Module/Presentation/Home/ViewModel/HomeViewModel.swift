@@ -21,34 +21,7 @@ class HomePageVM {
         self.weatherRepository = weatherRepository
         
     }
-    
-    func loadListCities() {
-        self.model.selectedCities = []
-        self.model.selectedCities.append(.init(id: 0,
-                                               name: "Casablanca",
-                                               subName: "Morocco",
-                                               lon: 33.5928,
-                                               lat: -7.6192))
-        
-        self.model.selectedCities.append(.init(id: 1,
-                                               name: "Rabat",
-                                               subName: "Morocco",
-                                               lon: 33.9911,
-                                               lat: -6.8401))
-        
-        self.model.selectedCities.append(.init(id: 2,
-                                               name: "Tanger",
-                                               subName: "Morocco",
-                                               lon: 35.7806,
-                                               lat: -5.8137))
-        
-        self.model.selectedCities.append(.init(id: 3,
-                                               name: "Marrakech",
-                                               subName: "Morocco",
-                                               lon: 31.6315,
-                                               lat: -8.0083))
-    }
-    
+ 
     /*
      This function will add city to the list via WorldWeatherApi
      */
@@ -138,4 +111,6 @@ class HomePageVM {
         })
         self.delegate?.onLoadNewLists()
     }
+    
+    
 }
