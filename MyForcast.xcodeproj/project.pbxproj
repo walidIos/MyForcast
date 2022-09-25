@@ -17,6 +17,8 @@
 		0EFE5A2228E0A94D00888801 /* MyForcastTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFE5A2128E0A94D00888801 /* MyForcastTests.swift */; };
 		0EFE5A2C28E0A94D00888801 /* MyForcastUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFE5A2B28E0A94D00888801 /* MyForcastUITests.swift */; };
 		0EFE5A2E28E0A94D00888801 /* MyForcastUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFE5A2D28E0A94D00888801 /* MyForcastUITestsLaunchTests.swift */; };
+		0EFE5A4628E0AB1000888801 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFE5A4428E0AB1000888801 /* HomeViewController.swift */; };
+		0EFE5A4728E0AB1000888801 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EFE5A4528E0AB1000888801 /* HomeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		0EFE5A2728E0A94D00888801 /* MyForcastUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyForcastUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EFE5A2B28E0A94D00888801 /* MyForcastUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyForcastUITests.swift; sourceTree = "<group>"; };
 		0EFE5A2D28E0A94D00888801 /* MyForcastUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyForcastUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0EFE5A4428E0AB1000888801 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		0EFE5A4528E0AB1000888801 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,8 @@
 		0EFE5A0628E0A94A00888801 /* MyForcast */ = {
 			isa = PBXGroup;
 			children = (
+				0EFE5A3D28E0AA9D00888801 /* Module */,
+				0EFE5A3C28E0AA9800888801 /* Main */,
 				0EFE5A0728E0A94A00888801 /* AppDelegate.swift */,
 				0EFE5A0928E0A94A00888801 /* SceneDelegate.swift */,
 				0EFE5A0B28E0A94A00888801 /* ViewController.swift */,
@@ -128,6 +134,70 @@
 				0EFE5A2D28E0A94D00888801 /* MyForcastUITestsLaunchTests.swift */,
 			);
 			path = MyForcastUITests;
+			sourceTree = "<group>";
+		};
+		0EFE5A3C28E0AA9800888801 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		0EFE5A3D28E0AA9D00888801 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				0EFE5A4028E0AACB00888801 /* Domain */,
+				0EFE5A3F28E0AAB300888801 /* Data */,
+				0EFE5A3E28E0AAA300888801 /* Presentation */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		0EFE5A3E28E0AAA300888801 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				0EFE5A4228E0AAF100888801 /* Home */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		0EFE5A3F28E0AAB300888801 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		0EFE5A4028E0AACB00888801 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				0EFE5A4128E0AAE300888801 /* Entites */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		0EFE5A4128E0AAE300888801 /* Entites */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entites;
+			sourceTree = "<group>";
+		};
+		0EFE5A4228E0AAF100888801 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				0EFE5A4328E0AAFF00888801 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		0EFE5A4328E0AAFF00888801 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0EFE5A4428E0AB1000888801 /* HomeViewController.swift */,
+				0EFE5A4528E0AB1000888801 /* HomeViewController.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +307,7 @@
 				0EFE5A1728E0A94C00888801 /* LaunchScreen.storyboard in Resources */,
 				0EFE5A1428E0A94C00888801 /* Assets.xcassets in Resources */,
 				0EFE5A0F28E0A94A00888801 /* Main.storyboard in Resources */,
+				0EFE5A4728E0AB1000888801 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +332,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EFE5A4628E0AB1000888801 /* HomeViewController.swift in Sources */,
 				0EFE5A0C28E0A94A00888801 /* ViewController.swift in Sources */,
 				0EFE5A0828E0A94A00888801 /* AppDelegate.swift in Sources */,
 				0EFE5A1228E0A94A00888801 /* MyForcast.xcdatamodeld in Sources */,
