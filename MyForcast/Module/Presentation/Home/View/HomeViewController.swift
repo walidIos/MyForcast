@@ -109,21 +109,18 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
  This extension will handle the cell's actions
  */
 extension HomeViewController: WeatherItemCellDelegate {
+  
     func onClickItemCell(model: WeatherResponse?) {
-        
-    }
-    
-    /*func onClickItemCell(model: WeatherResponse?) {
         guard model != nil else {
             return
         }
-        print("redirect to details page to present weather for city \(model?.cityName ?? "")")
-        let vcDetails = CityDetailsVC()
+       
+        let vcDetails = DetailCityViewController()
         vcDetails.model = model
         vcDetails.modalTransitionStyle = .coverVertical
         vcDetails.modalPresentationStyle = .fullScreen
         self.present(vcDetails, animated: true)
-    }*/
+    }
 }
 
 /*

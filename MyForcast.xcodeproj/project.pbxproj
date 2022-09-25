@@ -44,6 +44,8 @@
 		0EFE5A8828E0F75F00888801 /* SearchCityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EFE5A8628E0F75F00888801 /* SearchCityViewController.xib */; };
 		0EFE5A8C28E0F84400888801 /* CityItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFE5A8A28E0F84400888801 /* CityItemCell.swift */; };
 		0EFE5A8D28E0F84400888801 /* CityItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EFE5A8B28E0F84400888801 /* CityItemCell.xib */; };
+		0EFE5A9128E0FEA200888801 /* DetailCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFE5A8F28E0FEA200888801 /* DetailCityViewController.swift */; };
+		0EFE5A9228E0FEA200888801 /* DetailCityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EFE5A9028E0FEA200888801 /* DetailCityViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +107,8 @@
 		0EFE5A8628E0F75F00888801 /* SearchCityViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCityViewController.xib; sourceTree = "<group>"; };
 		0EFE5A8A28E0F84400888801 /* CityItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityItemCell.swift; sourceTree = "<group>"; };
 		0EFE5A8B28E0F84400888801 /* CityItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CityItemCell.xib; sourceTree = "<group>"; };
+		0EFE5A8F28E0FEA200888801 /* DetailCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCityViewController.swift; sourceTree = "<group>"; };
+		0EFE5A9028E0FEA200888801 /* DetailCityViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailCityViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +211,7 @@
 		0EFE5A3E28E0AAA300888801 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				0EFE5A8E28E0FE1A00888801 /* DetailCity */,
 				0EFE5A8028E0F6BE00888801 /* SearchCity */,
 				0EFE5A4228E0AAF100888801 /* Home */,
 			);
@@ -371,6 +376,15 @@
 			path = SearchCityCell;
 			sourceTree = "<group>";
 		};
+		0EFE5A8E28E0FE1A00888801 /* DetailCity */ = {
+			isa = PBXGroup;
+			children = (
+				0EFE5A8F28E0FEA200888801 /* DetailCityViewController.swift */,
+				0EFE5A9028E0FEA200888801 /* DetailCityViewController.xib */,
+			);
+			path = DetailCity;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -475,6 +489,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EFE5A9228E0FEA200888801 /* DetailCityViewController.xib in Resources */,
 				0EFE5A1728E0A94C00888801 /* LaunchScreen.storyboard in Resources */,
 				0EFE5A8D28E0F84400888801 /* CityItemCell.xib in Resources */,
 				0EFE5A1428E0A94C00888801 /* Assets.xcassets in Resources */,
@@ -506,6 +521,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EFE5A9128E0FEA200888801 /* DetailCityViewController.swift in Sources */,
 				0EFE5A5C28E0ACC800888801 /* ApiRequest.swift in Sources */,
 				0EFE5A6628E0AEC800888801 /* CityModel.swift in Sources */,
 				0EFE5A6028E0AE1800888801 /* WeatherResponse.swift in Sources */,
