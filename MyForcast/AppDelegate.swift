@@ -10,16 +10,39 @@ import CoreData
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
+    var window: UIWindow?
+    static let splashScreenDelay: CGFloat = 0.3
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         if #available(iOS 13.0, *) {
             return true
         }
+        if #available(iOS 13.0, *) {
+            return true
+        }
+        
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = UIStoryboard(name: "LaunchScreen", bundle: nil).instantiateInitialViewController()
+        window?.makeKeyAndVisible()
+        
+        guard window != nil else {
+            return true
+        }
+        
+        rootUpdate()
         return true
     }
-
+    func rootUpdate() {
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + AppDelegate.splashScreenDelay) {
+            let rootVC = HomeViewController()
+            let weatherRepository = WeatherRepositoryImp(httpClient: HttpClientDecorator(HttpClientImpl(httpSession: URLSession.shared)))
+            rootVC.viewModel = HomePageVM(weatherRepository: weatherRepository)
+            self.window?.rootViewController = rootVC
+            self.window?.makeKeyAndVisible()
+        }
+    }
     
 
     // MARK: - Core Data stack
